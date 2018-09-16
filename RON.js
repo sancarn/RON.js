@@ -1,4 +1,4 @@
-window.RON = (function(){
+(function(){
   class cRON {
     constructor(){
       this.__symbols = {};
@@ -256,14 +256,14 @@ window.RON = (function(){
           if(hash=="nil"){
             return null;
           } else {
-            throw "Error: Expected \"nil\" but found \"" + hash + "\"" 
+            throw "Error: Expected \"nil\" but found \"" + hash + "\"";
           }
           break;
         case "N":
           if(hash=="NaN"){
             return NaN;
           } else {
-            throw "Error: Expected \"NaN\" but found \"" + hash + "\"" 
+            throw "Error: Expected \"NaN\" but found \"" + hash + "\"";
           }
           break;
         default:
@@ -273,5 +273,9 @@ window.RON = (function(){
       }
     }
   }
-  return new cRON();
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
+    module.exports = new cRON();
+  } else {
+    window.RON =  new cRON();
+  }
 })()
