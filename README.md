@@ -4,6 +4,9 @@ Javascript Implementation of Ruby Object Notation
 # Examples:
 
 ```js
+//Parse nil
+RON.parse("nil") //=> null
+
 //Parse String:
 RON.parse("\"abc\"") //=> "abc"
 
@@ -12,6 +15,9 @@ RON.parse("1") //=> 1
 
 //Parse Float
 RON.parse("1.1") //=> 1.1
+
+//Parse NaN
+RON.parse("NaN") //=> NaN
 
 //Parse Symbols
 RON.parse(":a") //=> Symbol(a)
