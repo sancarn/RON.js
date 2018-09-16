@@ -1,5 +1,5 @@
-window.RubyHash = (function(){
-  class cRubyHash {
+window.RON = (function(){
+  class cRON {
     constructor(){
       this.__symbols = {};
     }
@@ -258,5 +258,5 @@ window.RubyHash = (function(){
       }
     }
   }
-  return new cRubyHash();
+  return new cRON();
 })()
