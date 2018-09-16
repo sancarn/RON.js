@@ -251,6 +251,21 @@ window.RON = (function(){
           } else {
             throw "Error: Invalid regex.";
           }
+          break;
+        case "n":
+          if(hash=="nil"){
+            return null;
+          } else {
+            throw "Error: Expected \"nil\" but found \"" + hash + "\"" 
+          }
+          break;
+        case "N":
+          if(hash=="NaN"){
+            return NaN;
+          } else {
+            throw "Error: Expected \"NaN\" but found \"" + hash + "\"" 
+          }
+          break;
         default:
           //HACK
           return eval(hash);
