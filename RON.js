@@ -29,7 +29,6 @@
             if(sectionString[index+1] == "<"){
               depth["#<>"]++;
               depth["total"]++;
-              index++;
             }
             break;
           case ">":
