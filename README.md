@@ -1,5 +1,5 @@
 # RON.js
-Javascript Implementation of Ruby Object Notation
+Javascript implementation of Ruby Object Notation
 
 # Examples:
 
@@ -66,13 +66,29 @@ RON.parse("#<ClassName {:vars=>{:@a=>1,:@b=>\"abc\"},:methods=>[:someMethod]}>")
     :object => #<Animal {:vars=>{:@sound=>"miao",:@size=>\"large\"},:methods=>[:miao]}>
   }]`)
 ```
+# Encoding
+
+To encode a Ruby object in RON simply call `someObject.to_RON`:
+
+```ruby
+class Klass
+ def initialize()
+  @someVar = 1
+ end
+ def someMethod
+  puts "hello world"
+ end
+end
+
+puts {:a=>"b",Klass.new => ["d","e","f"]}.to_RON
+```
 
 # Road map:
 * [x] Implement String
-* [ ] Implement Int   (Hack)
-* [ ] Implement Float (Hack)
-* [ ] Implement Regex (Hack)
+* [ ] Implement Int   (Works but currenlty hacked in)
+* [ ] Implement Float (Works but currenlty hacked in)
+* [ ] Implement Regex (Works but currenlty hacked in)
 * [x] Implement Array
 * [x] Implement Hash map
 * [x] Implement Objects
-* [x] Implement Recursive Objects
+* [ ] Implement Recursive Objects
