@@ -72,12 +72,12 @@ To encode a Ruby object in RON simply call `someObject.to_RON`:
 
 ```ruby
 class Klass
- def initialize()
-  @someVar = 1
- end
- def someMethod
-  puts "hello world"
- end
+  def initialize()
+    @someVar = 1
+  end
+  def someMethod
+    puts "hello world"
+  end
 end
 
 puts {:a=>"b",Klass.new => ["d","e","f"]}.to_RON
